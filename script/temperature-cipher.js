@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(isCorrect(cipherAttempt, temperature)) {
             window.location.href = "pages/final-decryption.html";
         } else {
-            alert("Wrong!");
+            alert("ERRADO!");
         }
     });
 });

@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
             let finalAnswer = prompt("Quem morreu nessa ilha?");
 
             if(isCorrect(finalAnswer, person)) {
-                alert("CONGRATS");
+                alert("PARABÉNS, VOCÊS ESTÃO LIVRES!");
             } else {
-                alert("NOP!");
+                alert("INCORRETO, NÃO HÁ NADA QUE POSSAMOS FAZER?");
             }
 
         } else {
-            alert("Sorry wrong!");
+            alert("EROU!");
         }
     });
 });
