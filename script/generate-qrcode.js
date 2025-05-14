@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("qrcode")
 
-        const destinyUrl = window.location.origin + window.location.pathname.replace("final-decryption.html", "")+ "Caiu-no-golpe.html";
+        const destinyUrl = window.location.origin + window.location.pathname.replace("final-decryption.html", "")+ "joke.html";
 
         new QRCode(container, {
             text: destinyUrl, 

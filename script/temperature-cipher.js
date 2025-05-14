@@ -5,20 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     cipherButton.addEventListener("click", () => {
         const cipherAttempt = parseInt(document.querySelector("#cipher-attempt").value);
     
-        if(isCorrect(cipherAttempt)) {
+        if(isCorrect(cipherAttempt, temperature)) {
             window.location.href = "pages/final-decryption.html";
         } else {
-            alert("Wrong");
+            alert("Wrong!");
         }
     });
-    
-    function isCorrect(cipherAttempt) {
-        if(cipherAttempt !== "") {
-            if(cipherAttempt == temperature) {
-                return true;
-            }
-        } else {
-            return false;
-        }
-    }
 });
