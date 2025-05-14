@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dica 2</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+         html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+            }
+
+        .dica {
+            position: absolute;
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            animation: bounce 8s linear infinite;
+        }   
+
+        h1 {
+            position: absolute;
+            font-family: 'Fredericka the Great', cursive;
+            color: rgb(179, 179, 179);
+            text-align: center;
+            width: 500px;
+            animation: float-around 20s ease-in-out infinite alternate;
+            z-index: 10;
+        }
+        h2 {
+            position: absolute;
+            top: 90%;
+            left: 70%;
+            font-family: 'Fredericka the Great', cursive;
+            color: rgb(117, 117, 117);
+            text-align: center;
+            width: 500px;
+            z-index: 1;
+        }
+
+        @keyframes float-around {
+            0%   { transform: translate(0vw, 0vh); }
+            20%  { transform: translate(70vw, 10vh); }
+            40%  { transform: translate(20vw, 60vh); }
+            60%  { transform: translate(80vw, 80vh); }
+            80%  { transform: translate(30vw, 30vh); }
+            100% { transform: translate(0vw, 0vh); }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="dica"><h1>Olhe o pc 12</h1></div>
+    <h2>Ainda com dulvidas? olhe o pc 5</h2>
+</body>
+</html>
