@@ -3,20 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decryption</title>
+    <title>Quem Morreu Aqui?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            font-family: 'Fredericka the Great', cursive;
+        }
+        .left-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 90vh;
+            width: 50vw;
+            user-select: none;
+            pointer-events: none;
+        }
+        .cipher {
+            width: 350px;
+            height: 90%;
+        }
+        .right-box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            height: 90vh;
+            width: 50vw;
+        }
+        .qrcode {
+            border: 2px solid #fff;
+            user-select: none;
+            pointer-events: none;
+        }
+        .input-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            height: 20vh;
+            width: 300px;
+
+        }
+        input {
+            width: 290px;
+            height: 50px;
+            background-color: #000;
+            border: none;
+            border-bottom: #4b4b4b 2px solid;
+            padding-left: 10px;
+            font-size: 20px;
+            font-style: italic;
+            color: rgb(179, 179, 179);
+        }
+        input:focus {
+            outline: none;
+            border-bottom: #fff 2px solid;
+            font-style: italic;
+            color: #fff;
+            
+        }
+        button {
+            width: 300px;
+            height: 50px;
+            background-color: #000;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+            font-style: italic;
+            cursor: pointer;
+        }
+        .tip {
+            position: absolute;
+            top: 90%;
+            left: 25%;
+            transform: translateX(-50%);
+            color: rgb(179, 179, 179);
+            font-size: 30px;
+            animation: blink 10s linear infinite;
+            user-select: none;
+            pointer-events: none;
+        }
+        .url {
+            position: absolute;
+            bottom: 50%;
+            left: 17%;
+            transform: translateX(-50%);
+            transform: rotate(60deg) translateY(-50%);
+            color:  rgb(179, 179, 179);
+            font-size: 20px;
+            animation: blink 120s linear infinite;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .island {
+            position: absolute;
+            bottom: 20%;
+            left: 90%;
+            transform: translateX(-50%);
+            color:  rgb(179, 179, 179);
+            font-size: 20px;
+            animation: blink 300s linear infinite;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .ghost {
+            position: absolute;
+            bottom: 90%;
+            left: 10%;
+            transform: translateX(-50%);
+            color:  rgb(179, 179, 179);
+            font-size: 30px;
+             animation: blink 600s linear infinite; 
+            user-select: none;
+            pointer-events: none;
+        }
+
+        @keyframes blink {
+            0%, 49%   { opacity: 0; }
+            50%, 55% { opacity: 1; }
+            56%, 100% { opacity: 0; }
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <img src="../images/cifra.png" alt="">
+    <div class="left-box">
+        <img class="cipher" src="../images/cifra.png" alt="">
     </div>
 
-    <div id="qrcode">
+    <div class="right-box">
+        <div class="qrcode" id="qrcode">
+        </div>
+
+        <div class="input-box">
+            <input id="cipher-attempt" type="text" placeholder="...">
+            <button id="submit-cipher" type="submit">Submit</button>
+        </div>
     </div>
 
-    <div>
-        <input id="cipher-attempt" type="text" placeholder="">
-        <button id="submit-cipher" type="submit">Submit</button>
-    </div>
+    <h1 class="tip">Olhe o pc 10</h1>
+    <h1 class="url">Olhe o nome da página</h1>
+    <h1 class="island">8 11 7 0</h1>
+    <h1 class="ghost">Tá demorando em!</h1>
 
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
     <script src="../script/is-correct-answer.js"></script>
